@@ -3,6 +3,7 @@
 ### Deployment on GitHub Pages
 
 Link for pages
+https://sabr5840.github.io/reverse_guess_a_number/ 
 
 
 ## Introduction
