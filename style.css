@@ -1,0 +1,16 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  #game {
+    margin: 30px;
+  }
+  #guesses {
+    margin-bottom: 20px;
+  }
+  .guess {
+    margin-top: 5px;
+  }
+  button {
+    margin-left: 10px;
+  }
