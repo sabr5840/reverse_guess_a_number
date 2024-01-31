@@ -1,5 +1,9 @@
 # Reverse Guess The Number - Part 1
 
+### Deployment on GitHub Pages
+
+
+
 ## Introduction
 
 As part of my coursework, I'm tasked with developing a reverse version of the "Guess the Number" game. In this twist on the classic game, the computer is the one making guesses, attempting to determine the number I have in mind. My role is to provide feedback on each guess by indicating whether it's too low, too high, or correct.
