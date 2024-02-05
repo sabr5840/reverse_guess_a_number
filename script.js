@@ -1,26 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    makeGuess();
+  let min = 1;
+  let max = 100;
+  let guessedMade = 0;
+  makeGuess(min, max, guessedMade); // Korrekt inkludering af alle argumenter
+});
+
+function makeGuess(min, max, guessedMade) {
+  let guess = Math.floor(min + (max - min) / 2);
+  guessedMade++; // Øg tælleren for hvert gæt
+  displayGuess(guess, min, max, guessedMade); 
+}
+
+function displayGuess(guess, min, max, guessedMade) { 
+  let guessesDiv = document.getElementById('guesses');
+  guessesDiv.innerHTML = `I'm guessing ${guess}. Is that... ` +
+    `<button id="too-low">Too Low</button>` +
+    `<button id="too-high">Too High</button>` +
+    `<button id="correct">Correct!</button>` +
+    `Attempt: ${guessedMade}`; 
+
+  // Ret event listeners til at inkludere guessedMade
+  document.getElementById('too-low').addEventListener('click', () => {
+    makeGuess(guess + 1, max, guessedMade); 
   });
-  
-  function makeGuess() {
-    let guess = randomGuess();
-    displayGuess(guess);
-  }
-  
-  function randomGuess() {
-    // In this version, the guess is completely random
-    return Math.floor(Math.random() * 100) + 1;
-  }
-  
-  function displayGuess(guess) {
-    let guessesDiv = document.getElementById('guesses');
-    guessesDiv.innerHTML = `I'm guessing ${guess}. Is that... ` +
-      `<button id="too-low">Too Low</button>` +
-      `<button id="too-high">Too High</button>` +
-      `<button id="correct">Correct!</button>`;
-  
-    // Add event listeners for buttons
-    document.getElementById('too-low').addEventListener('click', makeGuess);
-    document.getElementById('too-high').addEventListener('click', makeGuess);
-    document.getElementById('correct').addEventListener('click', () => alert('Hooray! I guessed it!'));
-  }
+
+  document.getElementById('too-high').addEventListener('click', () => {
+    makeGuess(min, guess - 1, guessedMade); 
+  });
+
+  document.getElementById('correct').addEventListener('click', () => alert(`Hooray! I guessed it in ${guessedMade} attempts!`));
+}

@@ -6,9 +6,9 @@ My site is live at: https://sabr5840.github.io/reverse_guess_a_number/
 
 ## Introduction
 
-As part of my coursework, I'm tasked with developing a reverse version of the "Guess the Number" game. In this twist on the classic game, the computer is the one making guesses, attempting to determine the number I have in mind. My role is to provide feedback on each guess by indicating whether it's too low, too high, or correct.
+In this coursework project, I have developed a reverse version of the traditional "Guess the Number" game. Unlike the classic variant, this game features the computer as the guesser, tasked with identifying the secret number I have in mind. My role is to guide the computer's guesses by indicating whether each guess is too low, too high, or correct.
 
-This initial iteration focuses on creating a basic user interface and interaction logic without incorporating a sophisticated guessing algorithm. The computer's guesses will be random, laying the groundwork for a more intelligent algorithm in subsequent parts of the project.
+This version introduces a binary search algorithm to enhance the guessing process, making the computer's attempts more systematic and efficient compared to random guessing. This approach significantly reduces the number of guesses needed to find the correct number by narrowing down the possible range based on the feedback provided.
 
 ## Project Requirements
 
@@ -18,7 +18,7 @@ The assignment requires developing a user interface utilizing HTML, CSS, and Jav
 - Too High
 - Correct
 
-The game continues with random guesses until the "Correct" feedback is given. The primary objective at this stage is to ensure the interface operates smoothly, with the integration of a more complex guessing algorithm planned for the next phase of the project.
+Initially, the game was designed to proceed with random guesses. However, with the incorporation of the binary search algorithm, it now follows a more intelligent approach in subsequent guesses until the correct number is identified. The main goal at this stage was to ensure seamless operation of the interface, setting the stage for further enhancements.
 
 ## Development Process
 
